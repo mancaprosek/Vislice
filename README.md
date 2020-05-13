@@ -1,4 +1,4 @@
-# Vislice2
+# Vislice
 
 Projekt pri predmetu uvod v programiranje
 
