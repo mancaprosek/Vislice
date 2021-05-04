@@ -7,12 +7,36 @@ NAPACNA_CRKA = '-'
 ZMAGA = 'W'
 PORAZ = 'X'
 
+ZACETEK = 'Z'
+
+
+class Vislice:
+    def __init__(self):
+        self.igre = {}
+    
+    def prost_id_igre(self):
+        if self.igre:
+            return max(self.igre) + 1 #self.igre gre direkt čez ključe
+        else:
+            return 0
+    
+    def nova_igra(self):
+        igra = nova_igra()
+        id = self.prost_id_igre()
+        self.igre[id] = (igra, ZACETEK)
+        return id
+
+    def ugibaj(self, id_igre, crka):
+        igra, stanje = self.igre[id_igre]
+        stanje = igra.ugibaj(crka)
+        self.igre[id_igre] = (igra, stanje)
+
 
 class Igra:
 
-    def __init__(self, geslo, crke=[]):
+    def __init__(self, geslo):
         self.geslo = geslo
-        self.crke = crke
+        self.crke = []
     
 
     def napacne_crke(self):
@@ -78,4 +102,4 @@ import random
 def nova_igra():
     geslo = random.choice(bazen_besed)
     return Igra(geslo)
-    
+
