@@ -1,6 +1,4 @@
-<html>
-
-<body>
+%rebase('base.tpl', naslov='Igra vislic')
 <h1>{{igra.pravilni_del_gesla()}}</h1>
 
 Nepravilne črke: {{igra.nepravilni_ugibi()}} <br/>
@@ -18,7 +16,3 @@ Stopnja obešenosti: {{igra.stevilo_napak()}}
 </form>
 
 % end
-
-</body>
-
-</html>

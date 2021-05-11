@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
+%rebase('base.tpl')
+<h1>Vislice</h1>
 
-<body>
-
-  <h1>Vislice</h1>
 
   <blockquote>
     Vislice so najboljša igra za preganjanje dolgčasa (poleg tetrisa).
@@ -12,9 +9,6 @@
 
   <img src="img/10.jpg" alt="obesanje">
 
-  <form action="/igra/" method="post">
+  <form action="/nova_igra/" method="post">
     <button type="submit">Nova igra</button>
   </form>
-</body>
-
-</html>
